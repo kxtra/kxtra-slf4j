@@ -67,7 +67,7 @@ fun test() {
 val logger = getLogger("custom-name")
 ```
 
-## Lazy Logging
+## Lazy Evaluation
 
 [Source](https://github.com/kxtra/kxtra-slf4j/blob/master/src/main/java/org/kxtra/slf4j/logger/Logger.kt)
 
