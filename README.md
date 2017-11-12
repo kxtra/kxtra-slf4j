@@ -45,20 +45,20 @@ fun test() {
 
 ```kotlin
 class MyClass {
-    val loggerWithDeclaredName = getLogger()
-    val loggerWithSubClassName = getLogger(javaClass)
+    val loggerWithDeclarationName = getLogger()
+    val loggerWithClassName = getLogger(javaClass)
 }
 
 class MySubClass : MyClass() 
 
 fun test() {
     val myClass = MyClass()
-    assertEquals(MyClass::class.java.name, myClass.loggerWithDeclaredName.name)
-    assertEquals(MyClass::class.java.name, myClass.loggerWithSubClassName.name)
+    assertEquals(MyClass::class.java.name, myClass.loggerWithDeclarationName.name)
+    assertEquals(MyClass::class.java.name, myClass.loggerWithClassName.name)
     
     val mySubClass = MySubClass()
-    assertEquals(MyClass::class.java.name, mySubClass.loggerWithDeclaredName.name)
-    assertEquals(MySubClass::class.java.name, mySubClass.loggerWithSubClassName.name)
+    assertEquals(MyClass::class.java.name, mySubClass.loggerWithDeclarationName.name)
+    assertEquals(MySubClass::class.java.name, mySubClass.loggerWithClassName.name)
 }
 ```
 
