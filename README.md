@@ -72,7 +72,7 @@ val logger = getLogger("custom-name")
 [Source](https://github.com/kxtra/kxtra-slf4j/blob/master/src/main/java/org/kxtra/slf4j/logger/Logger.kt)
 
 ```kotlin
-logger.debug { "Started ${context.expensiveToString} from ${location.expensiveToString}" }
+logger.debug { "Started $context from $location" }
 ```
 
 The lambda expression will only be evaluated if the logger has debug enabled. 
