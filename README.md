@@ -8,7 +8,7 @@ Kotlin extensions for [SLF4J](https://www.slf4j.org/)
 
 Requires Java 7+
 
-## Getting a logger
+## Getting a Logger
 
 [Source](https://github.com/kxtra/kxtra-slf4j/blob/master/src/main/java/org/kxtra/slf4j/loggerfactory/LoggerFactory.kt)
 
@@ -24,9 +24,8 @@ class MyClass {
 }
 
 fun test() {
-    val myClassName = MyClass::class.java.name
-    assertEquals(myClassName, MyClass().logger.name)
-    assertEquals(myClassName, MyClass.staticLogger.name)
+    assertEquals(MyClass::class.java.name, MyClass().logger.name)
+    assertEquals(MyClass::class.java.name, MyClass.staticLogger.name)
 }
 ```
 
@@ -53,6 +52,10 @@ class MyClass {
 class MySubClass : MyClass() 
 
 fun test() {
+    val myClass = MyClass()
+    assertEquals(MyClass::class.java.name, myClass.loggerWithDeclaredName.name)
+    assertEquals(MyClass::class.java.name, myClass.loggerWithSubClassName.name)
+    
     val mySubClass = MySubClass()
     assertEquals(MyClass::class.java.name, mySubClass.loggerWithDeclaredName.name)
     assertEquals(MySubClass::class.java.name, mySubClass.loggerWithSubClassName.name)
@@ -63,3 +66,15 @@ fun test() {
 ```kotlin
 val logger = getLogger("custom-name")
 ```
+
+## Lazy Logging
+
+[Source](https://github.com/kxtra/kxtra-slf4j/blob/master/src/main/java/org/kxtra/slf4j/logger/Logger.kt)
+
+```kotlin
+logger.debug { "Started ${context.expensiveToString} from ${location.expensiveToString}" }
+```
+
+The lambda expression will only be evaluated if the logger has debug enabled. 
+
+Overloads are provided for every combination of logging level and arguments (Throwable, Marker). 
