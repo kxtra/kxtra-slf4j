@@ -2,6 +2,8 @@
 
 [![](https://jitpack.io/v/org.kxtra/kxtra-slf4j.svg)](https://jitpack.io/#org.kxtra/kxtra-slf4j)
 
+Kotlin extensions for [SLF4J](https://www.slf4j.org/)
+
 [How to get](https://jitpack.io/#org.kxtra/kxtra-slf4j)
 
 Requires Java 7+
@@ -10,7 +12,7 @@ Requires Java 7+
 
 [Source](https://github.com/kxtra/kxtra-slf4j/blob/master/src/main/java/org/kxtra/slf4j/loggerfactory/LoggerFactory.kt)
 
-Normal:
+* Normal:
 
 ```kotlin
 class MyClass {
@@ -28,7 +30,7 @@ fun test() {
 }
 ```
 
-Top level:
+* Top level:
 
 ```kotlin
 @file:JvmName("MyUtils")
@@ -40,7 +42,7 @@ fun test() {
 }
 ```
 
-Inheritance:
+* Inheritance:
 
 ```kotlin
 class MyClass {
@@ -57,7 +59,7 @@ fun test() {
 }
 ```
 
-Custom name:
+* Custom name:
 ```kotlin
 val logger = getLogger("custom-name")
 ```
