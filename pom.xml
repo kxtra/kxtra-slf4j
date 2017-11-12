@@ -6,7 +6,7 @@
 
     <groupId>org.kxtra</groupId>
     <artifactId>kxtra-slf4j</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0</version>
     <packaging>jar</packaging>
 
     <name>kxtra-slf4j</name>
