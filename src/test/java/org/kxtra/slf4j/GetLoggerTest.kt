@@ -18,6 +18,8 @@ class GetLoggerTest {
 
         open val myClassLogger = getLogger()
 
+        val subClassLogger = getLogger(javaClass)
+
         class Sub : MyClass() {
             // myClassLogger
         }
@@ -57,6 +59,13 @@ class GetLoggerTest {
     @Test
     fun `subclass override`() {
         assertEquals(MyClass.SubOverride::class.java.name, MyClass.SubOverride().myClassLogger.name)
+    }
+
+    @Test
+    fun `sub class logger`() {
+        assertEquals(MyClass::class.java.name, MyClass().subClassLogger.name)
+        assertEquals(MyClass.Sub::class.java.name, MyClass.Sub().subClassLogger.name)
+        assertEquals(MyClass.SubOverride::class.java.name, MyClass.SubOverride().subClassLogger.name)
     }
 
     @Test
