@@ -18,7 +18,6 @@ inline fun getLogger(): Logger {
 /**
  * Calls [LoggerFactory.getLogger].
  */
-@JvmSynthetic // hide from Java because direct method is preferred
 fun getLogger(clazz: Class<*>): Logger {
     return LoggerFactory.getLogger(clazz)
 }
@@ -26,7 +25,6 @@ fun getLogger(clazz: Class<*>): Logger {
 /**
  * Calls [LoggerFactory.getLogger].
  */
-@JvmSynthetic // hide from Java because direct method is preferred
 fun getLogger(name: String): Logger {
     return LoggerFactory.getLogger(name)
 }
