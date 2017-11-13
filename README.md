@@ -12,7 +12,7 @@ Requires Java 7+
 
 [Source](https://github.com/kxtra/kxtra-slf4j/blob/master/src/main/java/org/kxtra/slf4j/loggerfactory/LoggerFactory.kt)
 
-* Normal:
+* Standard:
 
 ```kotlin
 class MyClass {
