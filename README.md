@@ -4,9 +4,26 @@
 
 Kotlin extensions for [SLF4J](https://www.slf4j.org/)
 
-[How to get](https://jitpack.io/#org.kxtra/kxtra-slf4j)
-
 Requires Java 7+
+
+```
+<repositories>
+    <repository>
+        <id>jitpack.io</id>
+        <url>https://jitpack.io</url>
+    </repository>
+</repositories>
+```
+
+```
+<dependency>
+    <groupId>org.kxtra</groupId>
+    <artifactId>kxtra-slf4j</artifactId>
+    <version>1.0.0</version>
+</dependency>
+```
+
+
 
 ## Getting a Logger
 
