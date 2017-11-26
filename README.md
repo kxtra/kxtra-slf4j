@@ -48,6 +48,8 @@ fun test() {
 ```kotlin
 @file:JvmName("MyUtils")
 
+package com.example
+
 val logger = getLogger()
 
 fun test() {
