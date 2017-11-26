@@ -29,20 +29,17 @@ Requires Java 7+
 
 [Source](https://github.com/kxtra/kxtra-slf4j/blob/master/src/main/java/org/kxtra/slf4j/loggerfactory/LoggerFactory.kt)
 
-* Standard:
+* Static:
 
 ```kotlin
 class MyClass {
-    val logger = getLogger()
-
     companion object {
-        val staticLogger = getLogger()
+        val logger = getLogger()
     }
 }
 
 fun test() {
-    assertEquals(MyClass::class.java.name, MyClass().logger.name)
-    assertEquals(MyClass::class.java.name, MyClass.staticLogger.name)
+    assertEquals(MyClass::class.java.name, MyClass.logger.name)
 }
 ```
 
@@ -55,6 +52,18 @@ val topLevelLogger = getLogger()
 
 fun test() {
     assertEquals("com.example.MyUtils", topLevelLogger.name)
+}
+```
+
+* Instance:
+
+```kotlin
+class MyClass {
+    val logger = getLogger()
+}
+
+fun test() {
+    assertEquals(MyClass::class.java.name, MyClass().logger.name)
 }
 ```
 
