@@ -93,4 +93,4 @@ logger.debug { "Started $context from $location" }
 
 The lambda expression will only be evaluated if the logger has debug enabled. 
 
-Overloads are provided for every combination of logging level and arguments (Throwable, Marker). 
+Extensions are provided for every combination of logging level and arguments (Throwable, Marker). 
