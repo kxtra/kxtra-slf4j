@@ -59,18 +59,6 @@ fun test() {
 
 ```kotlin
 class MyClass {
-    val logger = getLogger()
-}
-
-fun test() {
-    assertEquals(MyClass::class.java.name, MyClass().logger.name)
-}
-```
-
-* Inheritance:
-
-```kotlin
-class MyClass {
     val loggerWithDeclarationName = getLogger()
     val loggerWithClassName = getLogger(javaClass)
 }
