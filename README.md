@@ -48,10 +48,10 @@ fun test() {
 ```kotlin
 @file:JvmName("MyUtils")
 
-val topLevelLogger = getLogger()
+val logger = getLogger()
 
 fun test() {
-    assertEquals("com.example.MyUtils", topLevelLogger.name)
+    assertEquals("com.example.MyUtils", logger.name)
 }
 ```
 
