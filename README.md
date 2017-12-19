@@ -19,7 +19,7 @@ Requires Java 7+
 <dependency>
     <groupId>org.kxtra</groupId>
     <artifactId>kxtra-slf4j</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
 </dependency>
 ```
 
