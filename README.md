@@ -61,20 +61,20 @@ fun test() {
 
 ```kotlin
 class MyClass {
-    val loggerWithDeclarationName = getLogger()
-    val loggerWithClassName = getLogger(javaClass)
+    val declarationLogger = getLogger()
+    val classLogger = getLogger(javaClass)
 }
 
 class MySubClass : MyClass() 
 
 fun test() {
     val myClass = MyClass()
-    assertEquals(MyClass::class.java.name, myClass.loggerWithDeclarationName.name)
-    assertEquals(MyClass::class.java.name, myClass.loggerWithClassName.name)
+    assertEquals(MyClass::class.java.name, myClass.declarationLogger.name)
+    assertEquals(MyClass::class.java.name, myClass.classLogger.name)
     
     val mySubClass = MySubClass()
-    assertEquals(MyClass::class.java.name, mySubClass.loggerWithDeclarationName.name)
-    assertEquals(MySubClass::class.java.name, mySubClass.loggerWithClassName.name)
+    assertEquals(MyClass::class.java.name, mySubClass.declarationLogger.name)
+    assertEquals(MySubClass::class.java.name, mySubClass.classLogger.name)
 }
 ```
 
@@ -93,4 +93,4 @@ logger.debug { "Started $context from $location" }
 
 The lambda expression will only be evaluated if the logger has debug enabled. 
 
-Overloads are provided for every combination of logging level and arguments (Throwable, Marker). 
+Extensions are provided for every combination of logging level and arguments (Throwable, Marker). 
