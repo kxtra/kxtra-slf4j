@@ -20,6 +20,7 @@
         <junit-platform.version>1.0.0</junit-platform.version>
         <slf4j.version>1.7.25</slf4j.version>
         <surefire.version>2.20</surefire.version>
+        <maven-source.version>2.2.1</maven-source.version>
     </properties>
 
     <dependencies>
@@ -92,6 +93,19 @@
                         <version>${jupiter.version}</version>
                     </dependency>
                 </dependencies>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>${maven-source.version}</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar-no-fork</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
