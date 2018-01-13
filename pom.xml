@@ -10,6 +10,16 @@
     <packaging>jar</packaging>
 
     <name>kxtra-slf4j</name>
+    <description>Kotlin extensions for SLF4J</description>
+    <url>https://github.com/kxtra/kxtra-slf4j</url>
+
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>http://www.opensource.org/licenses/mit-license.php</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
