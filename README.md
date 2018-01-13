@@ -1,6 +1,6 @@
 # kxtra-slf4j
 
-[![](https://jitpack.io/v/org.kxtra/kxtra-slf4j.svg)](https://jitpack.io/#org.kxtra/kxtra-slf4j)
+[![](https://jitpack.io/v/org.kxtra/kxtra-slf4j.svg?style=flat-square)](https://jitpack.io/#org.kxtra/kxtra-slf4j)
 
 Kotlin extensions for [SLF4J](https://www.slf4j.org/)
 
