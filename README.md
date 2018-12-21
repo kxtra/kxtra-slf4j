@@ -23,9 +23,9 @@ Requires Java 7+
 </dependency>
 ```
 
-## Getting a Logger
+[**Source**](src/main/java/org/kxtra/slf4j/Logger.kt)
 
-[**Source**](https://github.com/kxtra/kxtra-slf4j/blob/master/src/main/java/org/kxtra/slf4j/loggerfactory/LoggerFactory.kt)
+## Getting a Logger
 
 * Static:
 
@@ -73,8 +73,6 @@ val logger = getLogger("custom-name")
 ```
 
 ## Lazy Evaluation
-
-[**Source**](https://github.com/kxtra/kxtra-slf4j/blob/master/src/main/java/org/kxtra/slf4j/logger/Logger.kt)
 
 ```kotlin
 logger.debug { "Started $context from $location" }

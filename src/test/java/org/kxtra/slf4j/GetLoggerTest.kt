@@ -1,7 +1,6 @@
 package org.kxtra.slf4j
 
 import org.junit.jupiter.api.Test
-import org.kxtra.slf4j.loggerfactory.getLogger
 import kotlin.test.assertEquals
 
 class GetLoggerTest {
