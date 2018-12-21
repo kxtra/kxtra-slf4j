@@ -23,7 +23,7 @@ Requires Java 7+
 </dependency>
 ```
 
-[**Source**](src/main/java/org/kxtra/slf4j/Logger.kt)
+[**Source**](src/main/java/org/kxtra/slf4j/logger.kt)
 
 ## Getting a Logger
 

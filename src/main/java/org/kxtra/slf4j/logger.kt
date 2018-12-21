@@ -1,5 +1,3 @@
-@file:JvmName("KxLogger")
-
 package org.kxtra.slf4j
 
 import org.slf4j.Logger
