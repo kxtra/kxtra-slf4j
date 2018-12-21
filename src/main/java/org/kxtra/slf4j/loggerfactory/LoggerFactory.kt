@@ -9,7 +9,7 @@ import java.lang.invoke.MethodHandles
 /**
  * Calls [LoggerFactory.getLogger] with the [Class] that contains the call to this method.
  */
-@JvmSynthetic // inline only
+@JvmSynthetic
 @Suppress("NOTHING_TO_INLINE")
 inline fun getLogger(): Logger {
     return LoggerFactory.getLogger(MethodHandles.lookup().lookupClass())
@@ -18,13 +18,17 @@ inline fun getLogger(): Logger {
 /**
  * Calls [LoggerFactory.getLogger].
  */
-fun getLogger(clazz: Class<*>): Logger {
+@JvmSynthetic
+@Suppress("NOTHING_TO_INLINE")
+inline fun getLogger(clazz: Class<*>): Logger {
     return LoggerFactory.getLogger(clazz)
 }
 
 /**
  * Calls [LoggerFactory.getLogger].
  */
-fun getLogger(name: String): Logger {
+@JvmSynthetic
+@Suppress("NOTHING_TO_INLINE")
+inline fun getLogger(name: String): Logger {
     return LoggerFactory.getLogger(name)
 }
