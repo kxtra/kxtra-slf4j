@@ -1,12 +1,20 @@
 # kxtra-slf4j
 
-[![](https://jitpack.io/v/org.kxtra/kxtra-slf4j.svg?style=flat-square)](https://jitpack.io/#org.kxtra/kxtra-slf4j)
+[![](https://jitpack.io/v/org.kxtra/kxtra-slf4j.svg)](https://jitpack.io/#org.kxtra/kxtra-slf4j)
 
 Kotlin extensions for [SLF4J](https://www.slf4j.org/)
 
 Requires Java 7+
 
-```
+Contains only [synthetic](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-synthetic/index.html) [inline](https://kotlinlang.org/docs/reference/inline-functions.html) functions and thus only needs to be present at compile-time and not runtime
+
+[**Source**](src/main/java/org/kxtra/slf4j/logger.kt)
+
+## Including
+
+* Maven
+
+```xml
 <repositories>
     <repository>
         <id>jitpack.io</id>
@@ -15,15 +23,30 @@ Requires Java 7+
 </repositories>
 ```
 
-```
-<dependency>
-    <groupId>org.kxtra</groupId>
-    <artifactId>kxtra-slf4j</artifactId>
-    <version>1.0.1</version>
-</dependency>
+```xml
+<dependencies>
+    <dependency>
+        <groupId>org.kxtra</groupId>
+        <artifactId>kxtra-slf4j</artifactId>
+        <version>2.0.0</version>
+        <scope>provided</scope>
+    </dependency>
+</dependencies>
 ```
 
-[**Source**](src/main/java/org/kxtra/slf4j/logger.kt)
+* Gradle
+
+```groovy
+repositories {
+    maven { url 'https://jitpack.io' }
+}
+```
+
+```groovy
+dependencies {
+    compileOnly 'org.kxtra:kxtra-slf4j:2.0.0'
+}
+```
 
 ## Getting a Logger
 
