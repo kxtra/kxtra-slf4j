@@ -55,8 +55,17 @@ dependencies {
 ```kotlin
 class MyClass {
     companion object {
-        val logger = getLogger()
-        // assert(logger.name == MyClass::class.java.name)
+        private val logger = getLogger()
+    }
+}
+```
+
+**Note**: The following naive method (among others) does not properly use the name of the class, it instead uses the name of the companion object
+
+```kotlin
+class MyClass {
+    companion object {
+        private val logger = LoggerFactory.getLogger(javaClass)
     }
 }
 ```
@@ -64,23 +73,18 @@ class MyClass {
 * Top level:
 
 ```kotlin
-@file:JvmName("MyUtils")
-
-package com.example
-
-val logger = getLogger()
-// assert(logger.name == "com.example.MyUtils")
+private val logger = getLogger()
 ```
+
+**Note**: It is not easy to otherwise get the name of the enclosing file from the top level
 
 * Instance:
 
 ```kotlin
 class MyClass {
-    val declarationLogger = getLogger()
-    // assert(declarationLogger.name == MyClass::class.java.name)
+    protected val declarationLogger = getLogger()
     
-    val classLogger = getLogger(javaClass)
-    // assert(classLogger.name == MyClass::class.java.name)
+    protected val classLogger = getLogger(javaClass)
 }
 
 class MySubClass : MyClass() {
