@@ -31,6 +31,11 @@ Contains only [synthetic](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jv
         <version>2.0.0</version>
         <scope>provided</scope>
     </dependency>
+    <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-api</artifactId>
+        <version>1.7.25</version>
+    </dependency>
 </dependencies>
 ```
 
@@ -45,6 +50,7 @@ repositories {
 ```groovy
 dependencies {
     compileOnly 'org.kxtra:kxtra-slf4j:2.0.0'
+    api 'org.slf4j:slf4j-api:1.7.25'
 }
 ```
 
