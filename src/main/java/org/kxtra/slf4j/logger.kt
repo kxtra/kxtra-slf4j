@@ -139,3 +139,35 @@ inline fun Logger.debug(marker: Marker?, throwable: Throwable?, lazyMessage: () 
 inline fun Logger.trace(marker: Marker?, throwable: Throwable?, lazyMessage: () -> Any?) {
     if (isTraceEnabled(marker)) trace(marker, lazyMessage().toString(), throwable)
 }
+
+
+
+@JvmSynthetic
+@Suppress("NOTHING_TO_INLINE")
+inline fun Logger.error(throwable: Throwable?) {
+    error("", throwable)
+}
+
+@JvmSynthetic
+@Suppress("NOTHING_TO_INLINE")
+inline fun Logger.warn(throwable: Throwable?) {
+    warn("", throwable)
+}
+
+@JvmSynthetic
+@Suppress("NOTHING_TO_INLINE")
+inline fun Logger.info(throwable: Throwable?) {
+    info("", throwable)
+}
+
+@JvmSynthetic
+@Suppress("NOTHING_TO_INLINE")
+inline fun Logger.debug(throwable: Throwable?) {
+    debug("", throwable)
+}
+
+@JvmSynthetic
+@Suppress("NOTHING_TO_INLINE")
+inline fun Logger.trace(throwable: Throwable?) {
+    trace("", throwable)
+}
