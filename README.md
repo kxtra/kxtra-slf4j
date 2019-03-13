@@ -1,6 +1,7 @@
 # kxtra-slf4j
 
 [![](https://jitpack.io/v/org.kxtra/kxtra-slf4j.svg)](https://jitpack.io/#org.kxtra/kxtra-slf4j)
+[![Build Status](https://img.shields.io/circleci/project/github/kxtra/kxtra-slf4j.svg)](https://circleci.com/gh/kxtra/kxtra-slf4j)
 
 Kotlin extensions for [SLF4J](https://www.slf4j.org/)
 
