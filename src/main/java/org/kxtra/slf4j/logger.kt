@@ -1,3 +1,5 @@
+@file:Suppress("NOTHING_TO_INLINE")
+
 package org.kxtra.slf4j
 
 import org.slf4j.Logger
@@ -9,7 +11,6 @@ import java.lang.invoke.MethodHandles
  * Calls [LoggerFactory.getLogger] with the [Class] that contains the call to this method.
  */
 @JvmSynthetic
-@Suppress("NOTHING_TO_INLINE")
 inline fun getLogger(): Logger {
     return LoggerFactory.getLogger(MethodHandles.lookup().lookupClass())
 }
@@ -18,7 +19,6 @@ inline fun getLogger(): Logger {
  * Calls [LoggerFactory.getLogger].
  */
 @JvmSynthetic
-@Suppress("NOTHING_TO_INLINE")
 inline fun getLogger(clazz: Class<*>): Logger {
     return LoggerFactory.getLogger(clazz)
 }
@@ -27,7 +27,6 @@ inline fun getLogger(clazz: Class<*>): Logger {
  * Calls [LoggerFactory.getLogger].
  */
 @JvmSynthetic
-@Suppress("NOTHING_TO_INLINE")
 inline fun getLogger(name: String): Logger {
     return LoggerFactory.getLogger(name)
 }
@@ -143,31 +142,26 @@ inline fun Logger.trace(marker: Marker?, throwable: Throwable?, lazyMessage: () 
 
 
 @JvmSynthetic
-@Suppress("NOTHING_TO_INLINE")
 inline fun Logger.error(throwable: Throwable?) {
     error("", throwable)
 }
 
 @JvmSynthetic
-@Suppress("NOTHING_TO_INLINE")
 inline fun Logger.warn(throwable: Throwable?) {
     warn("", throwable)
 }
 
 @JvmSynthetic
-@Suppress("NOTHING_TO_INLINE")
 inline fun Logger.info(throwable: Throwable?) {
     info("", throwable)
 }
 
 @JvmSynthetic
-@Suppress("NOTHING_TO_INLINE")
 inline fun Logger.debug(throwable: Throwable?) {
     debug("", throwable)
 }
 
 @JvmSynthetic
-@Suppress("NOTHING_TO_INLINE")
 inline fun Logger.trace(throwable: Throwable?) {
     trace("", throwable)
 }
