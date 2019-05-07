@@ -9,9 +9,9 @@ Requires Java 7+
 
 Contains only [synthetic](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-synthetic/index.html) [inline](https://kotlinlang.org/docs/reference/inline-functions.html) functions and thus only needs to be present at compile-time and not runtime
 
-[**Source**](src/main/java/org/kxtra/slf4j/logger.kt)
-
 ## Including
+
+* [**Source**](src/main/java/org/kxtra/slf4j/logger.kt) - A single file which can be manually added to any project
 
 * Maven
 
