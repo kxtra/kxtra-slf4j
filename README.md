@@ -20,7 +20,7 @@ Contains only [synthetic](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jv
 
 ## Getting a Logger
 
-* Static:
+**Static**
 
 ```kotlin
 class MyClass {
@@ -30,7 +30,7 @@ class MyClass {
 }
 ```
 
-**Note**: The following naive method (among others) does not properly use the name of the class, it instead uses the name of the companion object
+*Note*: The following naive method (among others) does not properly use the name of the class, it instead uses the name of the companion object
 
 ```kotlin
 class MyClass {
@@ -40,15 +40,15 @@ class MyClass {
 }
 ```
 
-* Top level:
+**Top level**
 
 ```kotlin
 private val logger = getLogger()
 ```
 
-**Note**: It is not easy to otherwise get the name of the enclosing file from the top level
+*Note*: It is not easy to otherwise get the name of the enclosing file from the top level
 
-* Instance:
+**Instance**
 
 ```kotlin
 class MyClass {
@@ -63,10 +63,10 @@ class MySubClass : MyClass() {
 }
 ```
 
-* Custom name:
+**Custom name**
 
 ```kotlin
-val logger = getLogger("custom-name")
+private val logger = getLogger("custom-name")
 ```
 
 ## Lazy Evaluation
@@ -81,9 +81,9 @@ Extensions are provided for every combination of logging level and arguments (Th
 
 ## Including
 
-* [**Source**](src/main/java/org/kxtra/slf4j/logger.kt) - A single file which can be manually added to any project
+[**Source**](src/main/java/org/kxtra/slf4j/logger.kt) - A single file which can be manually added to any project
 
-* Maven
+**Maven**
 
 ```xml
 <repositories>
@@ -110,7 +110,7 @@ Extensions are provided for every combination of logging level and arguments (Th
 </dependencies>
 ```
 
-* Gradle
+**Gradle**
 
 ```groovy
 repositories {
