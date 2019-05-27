@@ -2,13 +2,13 @@
 
 Kotlin extensions for [SLF4J](https://www.slf4j.org/)
 
-#####Easy Logger creation
+#### Easy Logger creation
 
 ```kotlin
 private val logger = getLogger()
 ```
 
-#####Lazy evaluation
+#### Lazy evaluation
 
 ```kotlin
 logger.debug { "$message only evaluated if debug is enabled" }
