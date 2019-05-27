@@ -8,7 +8,7 @@ Kotlin extensions for [SLF4J](https://www.slf4j.org/)
 private val logger = getLogger()
 ```
 
-#### Lazy evaluation
+#### Free lazy evaluation
 
 ```kotlin
 logger.debug { "$message only evaluated if debug is enabled" }
@@ -48,10 +48,16 @@ private val logger = getLogger()
 
 *Note*: It is not easy to otherwise get the name of the enclosing file from the top level
 
+**Custom name**
+
+```kotlin
+private val logger = getLogger("custom-name")
+```
+
 **Instance**
 
 ```kotlin
-class MyClass {
+abstract class MyClass {
     protected val declarationLogger = getLogger()
     
     protected val classLogger = getLogger(javaClass)
@@ -63,21 +69,21 @@ class MySubClass : MyClass() {
 }
 ```
 
-**Custom name**
-
-```kotlin
-private val logger = getLogger("custom-name")
-```
-
 ## Lazy Evaluation
 
 ```kotlin
-logger.debug { "Started $context from $location" }
+logger.debug { "$expensive $message" }
 ```
 
-The lambda expression will be inlined and only evaluated if the logger has the logging level enabled. 
+The lambda expression will be inlined and only evaluated if the logging level is enabled
 
-Extensions are provided for every combination of logging level and arguments (Throwable, Marker). 
+Extensions are provided for every combination of logging level and arguments
+
+```kotlin
+logger.debug(exception) { "$msg" }
+logger.debug(marker) { "$msg" }
+logger.debug(marker, exception) { "$msg" }
+```
 
 ## Including
 
