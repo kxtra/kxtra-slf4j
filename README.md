@@ -87,6 +87,8 @@ logger.error(marker, exception) { "$msg" }
 
 ## Including
 
+*Note*: [SLF4J requires a binding!](https://www.slf4j.org/manual.html#swapping)
+
 [**Source**](src/main/java/org/kxtra/slf4j/logger.kt) - A single file which can be manually added to any project
 
 **Maven**
