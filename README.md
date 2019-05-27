@@ -80,9 +80,9 @@ The lambda expression will be inlined and only evaluated if the logging level is
 Extensions are provided for every combination of logging level and arguments
 
 ```kotlin
-logger.debug(exception) { "$msg" }
-logger.debug(marker) { "$msg" }
-logger.debug(marker, exception) { "$msg" }
+logger.info(marker) { "$msg" }
+logger.warn(exception) { "$msg" }
+logger.error(marker, exception) { "$msg" }
 ```
 
 ## Including
