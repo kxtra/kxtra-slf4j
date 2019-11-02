@@ -107,7 +107,7 @@ logger.error(marker, exception) { "$msg" }
     <dependency>
         <groupId>org.kxtra</groupId>
         <artifactId>kxtra-slf4j</artifactId>
-        <version>2.0.0</version>
+        <version>2.1.0</version>
         <scope>provided</scope>
     </dependency>
     <dependency>
@@ -128,7 +128,7 @@ repositories {
 
 ```groovy
 dependencies {
-    compileOnly 'org.kxtra:kxtra-slf4j:2.0.0'
+    compileOnly 'org.kxtra:kxtra-slf4j:2.1.0'
     api 'org.slf4j:slf4j-api:1.7.28'
 }
 ```
