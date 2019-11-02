@@ -1,16 +1,14 @@
 package org.kxtra.slf4j
 
+import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Test
-import kotlin.test.assertEquals
 
 class GetLoggerTest {
 
     object MyObject {
         val myObjectLogger = getLogger()
-        @JvmField
-        val myObjectLogger2 = getLogger()
-        @JvmStatic
-        val myObjectLogger3 = getLogger()
+        @JvmField val myObjectLogger2 = getLogger()
+        @JvmStatic val myObjectLogger3 = getLogger()
     }
 
     open class MyClass {
@@ -30,10 +28,8 @@ class GetLoggerTest {
 
         companion object {
             val myClassLogger2 = getLogger()
-            @JvmField
-            val myClassLogger3 = getLogger()
-            @JvmStatic
-            val myClassLogger4 = getLogger()
+            @JvmField val myClassLogger3 = getLogger()
+            @JvmStatic val myClassLogger4 = getLogger()
         }
     }
 
